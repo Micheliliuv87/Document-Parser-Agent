@@ -62,11 +62,15 @@ Document Parser AI-Agent Using OpenAI ChatGPT 4-o Model
 """
 ```
 
-# How do things work together? 
+# How do things work together? [Packages Folder]
 
 * <b>Introduction of each file </b>
   1. Everything in the Packages folder is necessary!
   2. `Year_Shee_fun.py` is the first function you will need to parse the document. It processes a source Excel file, splitting sheets into separate yearly Excel files grouped by month. (This is necessary to prevent the GPT 4-o model from hallucinating and processing outside its prompt length)
   3. `Agent.py` is the actual AI-Agent Structure that implemented meta-prompt engineering(an edited version of what is published by [OpenAI Meta Prompt](https://platform.openai.com/docs/guides/prompt-generation?context=text-out)) to use the ChatPromptTemplate and ChatOpenAI model to extract key information.
   4. `Combine.py` is the document that cleans the DataFrame by removing unwanted [''] structures from string columns. Then it combines JSON files in the 'result_dir' into their respective Excel files based on year and sheet names derived from the JSON filenames.
-  
+  5. `Parser.py` is the actual parser function that processes Excel files from a specified directory, extracting data from sheets containing required columns (Date, Title, Features, Editions). For each row, it formats the data into text, uses an external function (extract_information) to parse the text, and saves the parsed results as JSON files in the output directory. It handles errors, skips invalid rows, and logs issues for debugging.
+
+# How to make this work? 
+
+1. First, you will need a document that matches the description above: [Click here to jump back to the original file structure](#where-does-it-implement-llm?).
