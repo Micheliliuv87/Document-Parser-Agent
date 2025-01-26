@@ -73,4 +73,44 @@ Document Parser AI-Agent Using OpenAI ChatGPT 4-o Model
 
 # How to make this work? 
 
-1. First, you will need a document that matches the description above: [Click here to jump back to the original file structure](#where-does-it-implement-llm?).
+1. First, you will need a document that matches the description above: [Click here to jump back to the original file structure](#where-does-it-implement-llm).
+2. Then run `prepare.py` to parse the document into smaller chunks for later processing.
+3. Then run `main.py` to fully execute the work.
+4. You then will get a document that is similar to the following structure
+
+
+* The processed document should be similar to the following, where each document has a certain year as its title and multiple sheets for different months `Product Updates (Synthetic Data)`
+
+| Date       | Feature Name                                        | Action   | Products Affected                                   |
+|------------|----------------------------------------------------|----------|----------------------------------------------------|
+| 2023-03-10 | Real-time Collaboration in Docs                    | added    | Google Docs, Google Apps, Google Workspace         |
+| 2023-03-10 | Improved Spam Protection in Gmail                  | updated  | Gmail, Google Workspace                           |
+| 2023-03-15 | Set Retention Policies for Drive Folders           | added    | Google Drive, Google Workspace                    |
+| 2023-03-15 | Export Presentations to PDF                        | added    | Google Slides, Google Workspace                   |
+| 2023-03-15 | Deprecated Older Export Formats                    | removed  | Google Slides, Google Docs, Google Sheets         |
+| 2023-03-22 | Enhanced User Profiles for Google Meet             | added    | Google Meet, Google Workspace                     |
+| 2023-03-22 | Edit Spreadsheets Offline                          | added    | Google Sheets, Google Workspace                   |
+
+
+# Updates 
+
+* Updated `Convert_to_FeatureSpecific.py` document to translate the generated document to look like the following:
+`Feature Updates Timeline (Synthetic Data)`
+
+| Year | Feature A                | Feature B                | Feature C                   | Feature D                   | Feature E                     | Feature F                   | Feature G                    | Feature H                   | Feature I                   | Feature J                    | Feature K                   |
+|------|--------------------------|--------------------------|-----------------------------|-----------------------------|-------------------------------|-----------------------------|------------------------------|-----------------------------|-----------------------------|------------------------------|-----------------------------|
+| 2006 | added                   |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2007 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2008 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2009 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2010 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2011 |                          | added                   |                             | added                      |                               |                             |                              |                             |                             |                              |                             |
+| 2012 |                          | updated                 |                             |                             | added                        |                             |                              |                             |                             |                              |                             |
+| 2013 |                          |                          | updated                     | added                      |                               | added                      |                              |                             |                             |                              |                             |
+| 2014 | updated                  |                          |                             | updated                    |                               |                             |                              |                             |                             | added                        |                             |
+| 2015 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2016 |                          |                          |                             |                             |                               |                             |                              |                             |                             |                              |                             |
+| 2017 | added                   |                          |                             | added                      |                               |                             |                              |                             |                             |                              |                             |
+| 2018 |                          |                          |                             |                             | added                        | added                      |                              |                             |                             |                              |                             |
+| 2019 |                          | updated                 |                             | added                      |                               |                             |                              |                             |                             |                              |                             |
+
