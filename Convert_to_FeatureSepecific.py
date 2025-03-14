@@ -3,7 +3,7 @@ import pandas as pd
 import re  # For sanitizing sheet names
 
 # Directory containing all yearly files
-yearly_files_dir = r"C:\Emory\Research\Agent\Try1214\data"  # Use raw string for Windows paths
+yearly_files_dir = r"replace with your directory\data"  # Use raw string for Windows paths
 
 # Output file path
 output_file = 'Combined_Features.xlsx'
