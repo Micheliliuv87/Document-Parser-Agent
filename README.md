@@ -2,6 +2,8 @@
 
 Document Parser AI-Agent Using OpenAI ChatGPT 4-o Model
 
+Transforming Unstructured Data to Structured Data for Analysis
+
 # What is this for? 
 
 * To parse an Excel file containing product updates for Google’s business-focused bundles.
